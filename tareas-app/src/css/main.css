@@ -1,0 +1,82 @@
+:root {
+	--size-1-2: 1.2rem;
+}
+
+html {
+	background: #00467F;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.heading {
+	background-color: #37bf9e;
+	font-size: var(--size-1-2);
+    color: #332e2e;
+    font-family: monospace, sans-serif;
+}
+
+.data {
+	background-color: #eae9e8;
+	font-size: 1rem;
+	color: #000;
+	padding: 6px 0;
+}
+
+.data div {
+	padding-left: 10px;
+}
+
+.data .acciones {
+	padding-right: 10px;
+}
+
+.border-der {
+    border-right: 2px solid #5a5959;
+}
+
+.detalle {
+	background-image: url('https://cdn0.iconfinder.com/data/icons/ui-essence/32/_1ui-32.png');
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: 24px 24px;
+    border-radius: 500px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.editar {
+	background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698873-icon-136-document-edit-32.png');
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: 24px 24px;
+    border-radius: 500px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.eliminar {
+	background-image: url('https://cdn2.iconfinder.com/data/icons/iconza/iconza_32x32_df086d/trash.png');
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: 24px 24px;
+    border-radius: 500px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	padding: 20px;
+	font-family: Verdana, sans-serif; 
+	font-size: var(--size-1-2);
+	font-weight: bold;
+	color: #fff;
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+}

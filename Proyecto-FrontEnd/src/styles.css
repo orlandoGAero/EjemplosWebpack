@@ -1,0 +1,16 @@
+:root {
+	--color-blanco: white;
+	--size: 1.2rem;	
+}
+
+body {
+	background-color: #ffec54;
+}
+
+.btn-click {
+	background-color: #c66;
+	color: var(--color-blanco);
+	padding: 8px;
+	font-size: var(--size);
+	border: 0;
+}

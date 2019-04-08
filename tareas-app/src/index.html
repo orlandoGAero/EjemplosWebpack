@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="fondo">
+<head>
+	<meta charset="UTF-8">
+	<title>Petición de Tareas</title>
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<div class="uk-container uk-margin-top" style="height: 100vh">
+		<div uk-grid>
+			<div class="uk-width-1-3@m">
+				<div class="uk-card uk-card-default uk-body uk-padding-small fondo">
+					<!-- urlencoded="x-www-form-urlencoded" -->
+					<form id="form-add">
+						<fieldset class="uk-fieldset">
+							<legend class="uk-legend uk-flex uk-flex-center">Tareas</legend>
+							<div class="uk-margin">
+								<input type="text" name='tarea' id="task" class="uk-input" placeholder="Tarea" autofocus>
+							</div>
+							<div class="uk-margin uk-flex uk-flex-right@s">
+								<button type="submit" class="uk-button uk-button-primary">
+									Agregar
+								</button>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="uk-width-3-5@m">
+				<div class="uk-card uk-card-default uk-body uk-padding-small">
+					<div id="contareas" class="uk-hidden">
+						<div id="modal-center" class="uk-flex-top" uk-modal></div>
+					</div>
+					<div id="sintareas" class="uk-flex uk-flex-center uk-flex-middle uk-hidden"></div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">Derechos reservados <span id="anio"></span> &copy;</footer>
+</body>
+</html>
