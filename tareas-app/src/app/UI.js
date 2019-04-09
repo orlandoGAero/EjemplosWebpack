@@ -247,10 +247,14 @@ export class UI {
 
 		const fechaTarea = `${dia} ${mes} ${anio}`;
 
-		if (completado === 0)
+		let atributo = '';
+		if (completado === 0) {
 			status = 'No Completa';
-		else
+		}
+		else {
 			status =  'Completa';
+			atributo = 'checked';
+		}
 
 		let vistaEdit = `
 			<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
@@ -268,6 +272,13 @@ export class UI {
 					            <input class="uk-input uk-width-1-2@s" type="text" id="taskEdit" value="${tarea}">
 					        	<button class="uk-button uk-button-primary">Editar</button>
 					        </div>
+					        <div>
+						        <span class="texto" id="statusTxt">${status}</span>
+						        <label class="switch">
+									<input type="checkbox" ${atributo} id="checkSta">
+									<div class="slider round"></div>
+						        </label>
+					        </div>
 						</fieldset>
 					</form>
 	    			<div class="uk-text-bold">${fechaTarea}</div>
@@ -277,6 +288,19 @@ export class UI {
 		`;
 
 		div.innerHTML = vistaEdit;
+
+		const txtSpan = document.querySelector('#statusTxt');
+		const inputCheck = document.querySelector('#checkSta');
+
+		inputCheck.addEventListener('click', (e) => {
+			let valorCheck = e.target.checked;
+
+			if (valorCheck === true) {
+				txtSpan.innerHTML = 'completa';
+			} else if (valorCheck === false) {
+				txtSpan.innerHTML = 'no Completa';
+			}
+		});
 	}
 
 }

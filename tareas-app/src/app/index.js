@@ -64,7 +64,15 @@ setTimeout(() => {
 				formEdit.addEventListener('submit', async (e) => {
 					// e.preventDefault();
 					const tarea = document.querySelector('#taskEdit').value;
-					await tareas.updateTareas(dataId, tarea);
+					const valorCheck = document.querySelector('#checkSta').checked;
+
+					let completado;
+					if (valorCheck === true) {
+						completado = 1;
+					} else if (valorCheck === false) {
+						completado = 0;
+					}
+					await tareas.updateTareas(dataId, tarea,completado);
 				});
 			}
 

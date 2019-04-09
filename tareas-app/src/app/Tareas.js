@@ -31,10 +31,11 @@ export class Tareas {
 		return data;
 	}
 
-	async updateTareas(idTarea, tarea) {
+	async updateTareas(idTarea, tarea, completado) {
 		const idT = `?id=${idTarea}`;
 		const nomT = `&tarea=${tarea}`;
-		const url = this.URI + idT + nomT;
+		const status = `&completado=${completado}`;
+		const url = this.URI + idT + nomT + status;
 		
 		const resp = await fetch(url, {
 			method: 'PUT'
